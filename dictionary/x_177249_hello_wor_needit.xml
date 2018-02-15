@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_177249_hello_wor_needit" type="collection">
+        <element label="New Date/Time" max_length="40" name="u_glide_date_time_13" type="glide_date_time"/>
+        <element label="New Date/Time" max_length="40" name="u_glide_date_time_14" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Legal" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Legal" sequence="0" value="Legal"/>
+                <element label="Financiero" sequence="1" value="Financiero"/>
+                <element label="Adminsitrativo" sequence="2" value="Adminsitrativo"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="legal 2" sequence="1" value="legal 2"/>
+                <element label="legal 3" sequence="2" value="legal 3"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="due_date"/>
+    </element>
+</database>
